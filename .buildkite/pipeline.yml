@@ -1,17 +1,14 @@
 steps:
   - label: "🤡 :hammer:"
-    command: "echo 'Running the hammer step...'"
     plugins:
       - plugin-tester#v1.1.1: ~
 
   - label: ":sparkles: lint"
-    command: "plugin-linter --check detect-clowns"
     plugins:
       - plugin-linter#v3.3.0:
           id: detect-clowns
 
-  - label: ":shell: Shellcheck"
-    
+  - label: ":shell: Shellcheck"    
     plugins:
       - shellcheck#v1.3.0:
           files: hooks/**
